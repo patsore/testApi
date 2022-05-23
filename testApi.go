@@ -16,7 +16,7 @@ import (
 func main() {
 	ctx, _ := context.WithTimeout(context.Background(), 10*time.Second)
 
-	client, err := mongo.NewClient(options.Client().ApplyURI("mongodb+srv://patsore:shusha2006@cluster0.dx5co.mongodb.net/?retryWrites=true&w=majority"))
+	client, err := mongo.NewClient(options.Client().ApplyURI("mongodb+srv://patsore:<pass>@cluster0.dx5co.mongodb.net/?retryWrites=true&w=majority"))
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -51,7 +51,7 @@ func postMessage(c *gin.Context) {
 		return
 	}
 
-	client, err := mongo.NewClient(options.Client().ApplyURI("mongodb+srv://patsore:shusha2006@cluster0.dx5co.mongodb.net/?retryWrites=true&w=majority"))
+	client, err := mongo.NewClient(options.Client().ApplyURI("mongodb+srv://patsore:<pass>6@cluster0.dx5co.mongodb.net/?retryWrites=true&w=majority"))
 	if err != nil {
 		log.Fatal(err)
 	}
